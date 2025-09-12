@@ -15,5 +15,7 @@ async function main() {
 const userSchema = new mongoose.Schema({
   name: String,
   email: String,
-  age: number,
+  age: Number,
 });
+
+const user = mongoose.model("user", userSchema);
