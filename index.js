@@ -47,7 +47,7 @@ const user = mongoose.model("user", userSchema);
 //   });
 
 user
-  .find({ age: { $gt: 21 } })
+  .findOneAndUpdate({ age: { $gt: 21 } })
   .then((res) => {
     console.log(res);
   })
