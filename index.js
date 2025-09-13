@@ -19,6 +19,7 @@ const userSchema = new mongoose.Schema({
 });
 
 const user = mongoose.model("user", userSchema);
+
 // const Employe = mongoose.model("Employe", userSchema);
 
 // const user2 = new user({
@@ -46,8 +47,17 @@ const user = mongoose.model("user", userSchema);
 //     console.log(data);
 //   });
 
+// user
+//   .findById({ _id: "68c437152edce9cd380bd5f0" })
+//   .then((res) => {
+//     console.log(res);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
 user
-  .findById({ _id: "68c437152edce9cd380bd5f0" })
+  .updateOne({ name: "Bruce" }, { age: 49 })
   .then((res) => {
     console.log(res);
   })
