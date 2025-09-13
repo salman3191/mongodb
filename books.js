@@ -25,7 +25,6 @@ const bookSchema = new mongoose.Schema({
 const Book = mongoose.model("Book", bookSchema);
 
 let book1 = new Book({
-  title: "Mathematic XII",
   author: "RD sharma",
   price: 1200,
 });
