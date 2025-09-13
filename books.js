@@ -30,7 +30,7 @@ const bookSchema = new mongoose.Schema({
 const Book = mongoose.model("Book", bookSchema);
 
 let book2 = new Book({
-  title: "Atomic habbits",
+  title: "sufhusie sbihrfiuashefiu ksudfh iushfiuh uihfiushf",
 
   price: 399,
 });
