@@ -49,7 +49,11 @@ const Book = mongoose.model("Book", bookSchema);
 //     console.log(err);
 //   });
 
-Book.findByIdAndUpdate("68c50ce2052beb823ae65401", { price: -500 })
+Book.findByIdAndUpdate(
+  "68c50ce2052beb823ae65401",
+  { price: -600 },
+  { runValidators: true }
+)
   .then((res) => {
     console.log(res);
   })
