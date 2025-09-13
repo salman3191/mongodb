@@ -37,7 +37,7 @@ let book3 = new Book({
   title: "forty rules of love",
   author: "someone",
   price: 399,
-  category: "fiction",
+  category: "comics",
 });
 book3
   .save()
