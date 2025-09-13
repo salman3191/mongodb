@@ -57,7 +57,11 @@ const user = mongoose.model("user", userSchema);
 //   });
 
 user
-  .findOneAndUpdate({ name: "Bruce" }, { age: 42 }, { new: true })
+  .findByIdAndUpdate(
+    { _id: "68c437152edce9cd380bd5f0" },
+    { age: 22 },
+    { new: true }
+  )
   .then((res) => {
     console.log(res);
   })
