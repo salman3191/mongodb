@@ -69,6 +69,6 @@ const user = mongoose.model("user", userSchema);
 //     console.log(err);
 //   });
 
-user.deleteMany({ age: 45 }).then((res) => {
+user.findByIdAndDelete("68c43abffb061d49cd855607").then((res) => {
   console.log(res);
 });
