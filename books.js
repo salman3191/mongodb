@@ -14,6 +14,7 @@ const bookSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
+    maxlength: 20,
   },
   author: {
     type: String,
@@ -21,14 +22,19 @@ const bookSchema = new mongoose.Schema({
   price: {
     type: Number,
   },
+  discount: {
+    type: Number,
+    default: 0,
+  },
 });
 const Book = mongoose.model("Book", bookSchema);
 
-let book1 = new Book({
-  author: "RD sharma",
-  price: 1200,
+let book2 = new Book({
+  title: "Atomic habbits",
+
+  price: 399,
 });
-book1
+book2
   .save()
   .then((res) => {
     console.log(res);
