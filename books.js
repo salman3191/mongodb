@@ -21,7 +21,7 @@ const bookSchema = new mongoose.Schema({
   },
   price: {
     type: Number,
-    min: 1,
+    min: [1, "price is too low for amazon selling"],
   },
   discount: {
     type: Number,
@@ -58,5 +58,5 @@ Book.findByIdAndUpdate(
     console.log(res);
   })
   .catch((err) => {
-    console.log(err);
+    console.log(err.errors);
   });
