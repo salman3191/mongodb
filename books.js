@@ -21,6 +21,7 @@ const bookSchema = new mongoose.Schema({
   },
   price: {
     type: Number,
+    min: 1,
   },
   discount: {
     type: Number,
@@ -33,14 +34,22 @@ const bookSchema = new mongoose.Schema({
 });
 const Book = mongoose.model("Book", bookSchema);
 
-let book3 = new Book({
-  title: "forty rules of love",
-  author: "someone",
-  price: 399,
-  category: "comics",
-});
-book3
-  .save()
+// let book3 = new Book({
+//   title: "forty rules of love",
+//   author: "someone",
+//   price: 399,
+//   category: "comics",
+// });
+// book3
+//   .save()
+//   .then((res) => {
+//     console.log(res);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+Book.findByIdAndUpdate("68c50ce2052beb823ae65401", { price: -500 })
   .then((res) => {
     console.log(res);
   })
