@@ -26,15 +26,20 @@ const bookSchema = new mongoose.Schema({
     type: Number,
     default: 0,
   },
+  category: {
+    type: String,
+    enum: ["fiction", "non fiction"],
+  },
 });
 const Book = mongoose.model("Book", bookSchema);
 
-let book2 = new Book({
-  title: "sufhusie sbihrfiuashefiu ksudfh iushfiuh uihfiushf",
-
+let book3 = new Book({
+  title: "forty rules of love",
+  author: "someone",
   price: 399,
+  category: "fiction",
 });
-book2
+book3
   .save()
   .then((res) => {
     console.log(res);
