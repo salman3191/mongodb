@@ -57,7 +57,7 @@ const user = mongoose.model("user", userSchema);
 //   });
 
 user
-  .updateMany({ age: { $gt: 30 } }, { age: 45 })
+  .findOneAndUpdate({ name: "Bruce" }, { age: 42 }, { new: true })
   .then((res) => {
     console.log(res);
   })
