@@ -56,15 +56,19 @@ const user = mongoose.model("user", userSchema);
 //     console.log(err);
 //   });
 
-user
-  .findByIdAndUpdate(
-    { _id: "68c437152edce9cd380bd5f0" },
-    { age: 22 },
-    { new: true }
-  )
-  .then((res) => {
-    console.log(res);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+// user
+//   .findByIdAndUpdate(
+//     { _id: "68c437152edce9cd380bd5f0" },
+//     { age: 22 },
+//     { new: true }
+//   )
+//   .then((res) => {
+//     console.log(res);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+user.deleteMany({ age: 45 }).then((res) => {
+  console.log(res);
+});
