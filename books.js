@@ -58,5 +58,5 @@ Book.findByIdAndUpdate(
     console.log(res);
   })
   .catch((err) => {
-    console.log(err.errors.price.properties);
+    console.log(err.errors.price.properties.message);
   });
