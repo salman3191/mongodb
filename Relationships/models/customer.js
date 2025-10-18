@@ -72,3 +72,21 @@ find();
 //   console.log(result);
 // };
 // addOrders();
+
+// function
+const addCust = async () => {
+  let newCust = new customer({
+    name: "karan Arjun",
+  });
+  let newOrder = new order({
+    item: "pizza",
+    price: 230,
+  });
+  newCust.orderDetails.push(newOrder);
+
+  await newOrder.save();
+  await newCust.save();
+  console.log("added new customer");
+};
+
+addCust();
