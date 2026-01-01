@@ -50,7 +50,7 @@ const find = async () => {
   let res = await customer
     .find({ name: "rahul kumar" })
     .populate("orderDetails");
-  console.log(res[0]);
+  // console.log(res[0]);
 };
 find();
 // const addOrders = async () => {
@@ -88,5 +88,10 @@ const addCust = async () => {
   await newCust.save();
   console.log("added new customer");
 };
+const delcust = async () => {
+  let data = await customer.findByIdAndDelete("68d778a65044b372f70307be");
+  console.log(data);
+};
 
-addCust();
+// addCust();
+delcust();
